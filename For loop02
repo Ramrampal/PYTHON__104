@@ -1,0 +1,14 @@
+N = int(input("Enter your no"))  # Get user input
+for x in range(5):
+    for y in range(N, N + 1):
+        print("💎" * y)
+
+
+#output 
+
+Enter your no7
+💎💎💎💎💎💎💎
+💎💎💎💎💎💎💎
+💎💎💎💎💎💎💎
+💎💎💎💎💎💎💎
+💎💎💎💎💎💎💎
