@@ -1,0 +1,2 @@
+ages = [19, 'raj', 2.09]
+print(ages)
