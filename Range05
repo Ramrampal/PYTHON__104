@@ -1,0 +1,10 @@
+R=range(10,20,2)
+for X in R:
+    print(X)
+# output
+10
+12
+14
+16
+18
+              
