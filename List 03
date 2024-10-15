@@ -1,0 +1,4 @@
+a = [1, 2, 3]
+
+# Add an element 4 at the end of list
+a.append(4)
