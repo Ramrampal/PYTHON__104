@@ -1,0 +1,12 @@
+if __name__ == '__main__':
+    n = int(input())  # Number of test cases
+    for _ in range(n):
+        a, b = input().split()  # Read the space-separated values
+        try:
+            # Perform integer division
+            result = int(a) // int(b)
+            print(result)
+        except ZeroDivisionError as e:
+            print("Error Code:", e)
+        except ValueError as e:
+            print("Error Code:", e)
