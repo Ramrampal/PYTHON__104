@@ -1,0 +1,6 @@
+a="rampal"
+print(len(a))
+print(a.endswith("pal"))
+print(a.upper())
+print(a.lower())
+print(a.capitalize())
