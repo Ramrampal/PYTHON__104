@@ -1,0 +1,4 @@
+latter= ''' Dear<|name|>,
+              you are selected!
+               <|Date|>'''
+print(latter.replace("<|name|>", "Rampal").replace("<|Date|>", "23 november 2025"))
