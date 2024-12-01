@@ -1,0 +1,37 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from html.parser import HTMLParser
+
+# Create a subclass and override the handler methods
+class MyHTMLParser(HTMLParser):
+    def handle_starttag(self, tag, attrs):
+        print(f"Start : {tag}")
+        for attr in attrs:
+            # If the attribute has no value, print None
+            if attr[1] is None:
+                print(f"-> {attr[0]} > None")
+            else:
+                print(f"-> {attr[0]} > {attr[1]}")
+
+    def handle_endtag(self, tag):
+        print(f"End   : {tag}")
+
+    def handle_startendtag(self, tag, attrs):
+        print(f"Empty : {tag}")
+        for attr in attrs:
+            # If the attribute has no value, print None
+            if attr[1] is None:
+                print(f"-> {attr[0]} > None")
+            else:
+                print(f"-> {attr[0]} > {attr[1]}")
+
+# Read input
+n = int(input())  # Number of lines
+html_code = ""
+for _ in range(n):
+    html_code += input().strip()
+
+# Create an instance of MyHTMLParser
+parser = MyHTMLParser()
+
+# Feed the HTML code to the parser
+parser.feed(html_code)
